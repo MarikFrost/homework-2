@@ -1,3 +1,3 @@
-$ pwd
-
-result: /home/marikfrost/git/homework-2
+#отобразить текущую папку
+#!/bin/bash
+pwd
