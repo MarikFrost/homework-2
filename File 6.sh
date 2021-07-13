@@ -1,18 +1,21 @@
+#скрипт создающий папку one в ней папку two и копирующий все файлы с именем test в нее 
+
+
 #!/bin/bash
-dir=one
-dir2=one/two
+dir=one  #переменной dir присваиваем папку one
+dir2=one/two #переменной dir2 присваиваем папку two которая находится в папке one
 
 
 
-mkdir one
-if [ -d $dir ]
+mkdir one  # создаем папку one
+if [ -d $dir ] # проверяем создаласьли папка
 then
-    mkdir one/two
+    mkdir one/two  #создаем папку two в папке one
 
-    if [ -d $dir2 ]
+    if [ -d $dir2 ] #проверяем создалась ли папка two
     then
-        cp test{1..6}.txt one/two
-        ls
+        cp test{1..6}.txt one/two #копируем все test файлы в папку
+        ls   #выводим содержимое папки
     else
         echo "Не удалось создать папку $dir2"
     fi
